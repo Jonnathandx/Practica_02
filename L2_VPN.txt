@@ -1,0 +1,31 @@
+**********************R1**********************
+
+configure terminal
+interface g0/0.1
+encapsulation dot1Q 10
+xconnect 8.8.8.8 666 encapsulation mpls
+end
+
+**********************R8**********************
+
+configure terminal
+interface g2/0.1
+encapsulation dot1Q 10
+xconnect 1.1.1.1 666 encapsulation mpls
+end
+
+**********************R2**********************
+
+configure terminal
+interface g0/0.1
+encapsulation dot1Q 10
+ip address 152.52.52.13 255.255.255.252
+end
+
+**********************R9**********************
+
+configure terminal
+interface g0/0.1
+encapsulation dot1Q 10
+ip address 152.52.52.18 255.255.255.252
+end
